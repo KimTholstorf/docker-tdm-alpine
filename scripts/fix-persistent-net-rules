@@ -1,0 +1,30 @@
+#!/bin/sh -e
+#
+# Author: Tobin Edwards
+# 
+# This is a hack to fix the mac address mapping that udev creates
+# after a vm is cloned. When the vm is cloned, the vnic is given a new
+# mac address. This results in udev creating a new network interface
+# (e.g. eth1) for the new mac addr instead of simply updating the mac
+# addr of eth0.
+#
+# The "fix" is to parse the rule file, removing extra files, and ensuring
+# that the entry for the latest mac addr is mapped to eth0.
+
+if [ -f /etc/udev/rules.d/70-persistent-net.rules ]; then
+    rm -f /tmp/70-persistent-net.rules
+    tail -1 /etc/udev/rules.d/70-persistent-net.rules | sed -n 's/eth[1-9][0-9]*/eth0/p' > /tmp/70-persistent-net.rules
+    if [ -s /tmp/70-persistent-net.rules ]; then
+        echo "Fixing udev mac address"
+        if [ -f /etc/udev-fixmac/header ]; then
+            cat /etc/udev-fixmac/header /tmp/70-persistent-net.rules > /etc/udev/rules.d/70-persistent-net.rules
+        else
+            cat /tmp/70-persistent-net.rules > /etc/udev/rules.d/70-persistent-net.rules
+        fi
+        rm -f /tmp/70-persistent-net.rules
+        /sbin/shutdown -r now
+    fi
+    rm -f /tmp/70-persistent-net.rules
+fi
+
+exit 0
