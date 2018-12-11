@@ -35,14 +35,23 @@ This product is solely intended for
 ##### Working with TAM Data Collector
 See section 3 in the [TDM 2.1.7 Collector Install and User Guide](http://ftpsite.vmware.com/download/rlspsrl/tdm/2.1.7/vmware_tam_data_collector_user_guide.pdf) on how to collect and export data.
 
-## Docker image version
+## Docker image
 
-*Next step in this project is to make this image availble from dockerhub to eliminate the need for anyone to build the image itself*
-But for now:
+***Available on Docker Hub at [kimtholstorf/tdm](https://hub.docker.com/r/kimtholstorf/tdm/)***
 ```sh
+docker pull kimtholstorf/tdm
+```
+or 
+```sh
+docker run -d -p 8443:8443 kimtholstorf/tdm:latest
+```
+If you insist you can build the image yourself:
+```sh
+git pull git@github.com:KimTholstorf/docker-tdm-alpine.git
+cd docker-tdm-alpine
 docker build -t kimtholstorf/tdm .
 ```
-run the image with port 8443 exposed
+then run the image with port 8443 exposed
 ```sh
 docker run -d -p 8443:8443 kimtholstorf/tdm
 ```
