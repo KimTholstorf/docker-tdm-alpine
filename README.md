@@ -15,8 +15,9 @@ This product is solely intended for:
 - VMware Technical Account Managers (TAM)
 - VMware System Enineers (SE) for [DICE Customer Models](http://dicevm.com)
 - VMware customers who have a current TAM service subscription (TDM in Collector mode)
-*There is no way for you to get any use out of this tool if you not a VMware TAM customer, a VMware TAM or VMware SE*
-[Click here to read more about what a VMware Technical Account Manager can bring to your orginization] (https://www.vmware.com/professional-services/optimization-advocacy.html)
+*Are you not a VMware TAM customer or VMware TAM or SE there is no way for you to get any use out of this tool*
+
+[Click here to read more about what a VMware Technical Account Manager can bring to your organization](https://www.vmware.com/professional-services/optimization-advocacy.html)
 
 ### Security
 
