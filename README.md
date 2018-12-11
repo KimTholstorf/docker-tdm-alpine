@@ -1,7 +1,7 @@
 ![TAM][logo]
 # VMware TAM Data Manager (TDM) Docker image
 This Docker version is not affiliated with or endorsed by the VMware Professional Services Tools team, who maintain and builds the official version.
-***Is to be used at your own risk.*** The intent is to have a Docker alternative to the official Java and OVA builds.
+***Only to to be used at your own risk.*** The intent is to have a Docker alternative to the official Java and OVA builds.
 
 Latest official TDM release is 2.1.7 and this Docker image is based on that TDM version.
 
