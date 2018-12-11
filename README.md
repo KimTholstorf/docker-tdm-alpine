@@ -1,25 +1,24 @@
 ![TAM][logo]
-# VMware TAM Data Manager (TDM)
-#### Docker version 
-This version is not affiliated with or endorsed by the VMware Professional Services Tools team, who maintain and builds the official version.
-***Is to be used at your own risk.*** The intend is to have a Docker alternative to the official Java and OVA builds.
+# VMware TAM Data Manager (TDM) Docker image
+This Docker version is not affiliated with or endorsed by the VMware Professional Services Tools team, who maintain and builds the official version.
+***Is to be used at your own risk.*** The intent is to have a Docker alternative to the official Java and OVA builds.
 
-Latest TDM release is 2.1.7 and this Docker image is based on that TDM version.
+Latest official TDM release is 2.1.7 and this Docker image is based on that TDM version.
 
-#### TDM Introduction
+## TDM Introduction
 The TAM Data Manager / TAM Data Collector gathers key statistics, deployed product licenses and usage information from VMware virtual infrastructure and VMware Horizon View deployments to be sent to and analyzed by the VMware TAM team as well as the VMware Phone Home Customer Intelligence team.
 
 Customers can install the TAM Data Collector to collect usage data. Customers collect data, export the project file, and provide it to VMware Technical Account Managers (TAMs) in person or by email. If the customer agrees to send data to VMware in the initial customer agreement, then data is sent to the VMware Phone Home network by the TAM at a later stage of the TDM process.
 
-##### Intended users
-This product is solely intended for 
+### Intended users
+This product is solely intended for: 
 - VMware Technical Account Managers (TAM)
 - VMware System Enineers (SE) for [DICE Customer Models](http://dicevm.com)
 - VMware customers who have a current TAM service subscription (TDM in Collector mode)
-*Are you not a VMware TAM customer or VMware TAM or SE there is no way for you to get any use out of this tool*
-[Click here to read more about what a VMware echnical Account Manager can bring to your orginization] (https://www.vmware.com/professional-services/optimization-advocacy.html)
+*There is no way for you to get any use out of this tool if you not a VMware TAM customer, a VMware TAM or VMware SE*
+[Click here to read more about what a VMware Technical Account Manager can bring to your orginization] (https://www.vmware.com/professional-services/optimization-advocacy.html)
 
-##### Security
+### Security
 
 | Port | Protocol | Discription |  |
 | ------ | ------ | ------ | ------ |
@@ -32,8 +31,8 @@ This product is solely intended for
 | 41985 |  | Port used for TAM Data Collector database event service. | Internal use only. Not default exposed in the Docker version  |
 | ~~5480~~ | ~~HTTPS~~ | ~~Inbound TCP port used to access the TAM Data Collector virtual appliance management Web interface from a browser.~~ | Not applicable for the Docker version  |
 
-##### Working with TAM Data Collector
-See section 3 in the [TDM 2.1.7 Collector Install and User Guide](http://ftpsite.vmware.com/download/rlspsrl/tdm/2.1.7/vmware_tam_data_collector_user_guide.pdf) on how to collect and export data.
+### Working with TAM Data Collector
+See section 3 in the [TDM Collector Install and User Guide](http://ftpsite.vmware.com/download/rlspsrl/tdm/2.1.7/vmware_tam_data_collector_user_guide.pdf) on how to collect and export data.
 
 ## Docker image
 
@@ -63,11 +62,11 @@ https://localhost:8443/web/index.html
 ```
 
 ## Official VMware version
-#### Downloads
+### Downloads
 - [TDM 2.1.7 OVA Build](http://ftpsite.vmware.com/download/rlspsrl/tdm/2.1.7/GA/tdm-PRODUCTION-2.1.7.0-9468226_OVF10.ova)
 - [TDM 2.1.7 JAVA Build](http://ftpsite.vmware.com/download/rlspsrl/tdm/2.1.7/GA/tdm-2.1.7-GA-build-9468226-Java-PRODUCTION.zip)
 - [TDM 2.1.7 upgrade tool](http://ftpsite.vmware.com/download/rlspsrl/tdm/2.1.7/GA/tdm-2.1.7-GA-upgrade-tool-9468226-PRODUCTION.jar)
-#### Documentation
+### Documentation
 - [TDM 2.1.7 Collector Install and User Guide](http://ftpsite.vmware.com/download/rlspsrl/tdm/2.1.7/vmware_tam_data_collector_user_guide.pdf)
 
 
