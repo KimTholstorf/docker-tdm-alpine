@@ -6,7 +6,7 @@ LABEL TDM_BUILD="9468226"
 LABEL MAINTAINER="kim@tholstorf.dk"
 LABEL DISCRIPTION="Docker image for VMware TAM Data Manager (Alpine3.8+JRE8u181)"
 
-ENV TDM_VERTION=2.1.7
+ENV TDM_VERSION=2.1.7
 ENV TDM_BUILD=9468226
 
 # prepare everything, then download and extract TDM binary
